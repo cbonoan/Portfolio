@@ -1,0 +1,62 @@
+#prog-bar-container {
+  padding: 15px 15px 15px 0;
+  margin-bottom: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+#prog-bar-container #skill-logo img {
+  width: 40px;
+  height: 40px;
+  margin-right: 20px;
+}
+
+#prog-bar-container #prog-bar-details {
+  width: 100%;
+}
+
+#prog-bar-container #prog-bar-details #prog-skill-details {
+  padding: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#prog-bar-container #prog-bar-details #prog-skill-details .skill {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+#prog-bar-container #prog-bar-details #prog-skill-details .percent {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+#prog-bar-container #prog-bar-details .prog-bar div {
+  background-color: white !important;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+          box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+
+#prog-bar-container #prog-bar-details .prog-bar div div {
+  background-image: -webkit-gradient(linear, left top, right top, from(#414A6B), color-stop(#4C386B), to(#FF5851));
+  background-image: linear-gradient(to right, #414A6B, #4C386B, #FF5851);
+}
+
+@media screen and (min-width: 992px) {
+  #skill-logo img {
+    width: 45px !important;
+    height: 45px !important;
+  }
+}
+/*# sourceMappingURL=ProgBar.css.map */

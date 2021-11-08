@@ -1,0 +1,194 @@
+@import './variables';
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    right: 0;
+    min-height: 2vh;
+    width: 100vw;
+    padding: 10px 0 10px 10px;
+    z-index: 2;
+    .full-screen-social-links {
+        display: none;
+    }
+    span {
+        display: block;
+        height: 47px;
+        position: relative;
+        margin-right: 10px;
+        z-index: 100;
+        cursor: pointer;
+        
+    }
+    span.close {
+        #line-1 {
+            animation: line1Anim 0.5s ease-in-out forwards;
+        }
+        #line-2 {
+            animation: line2Anim 0.5s ease-in-out forwards;
+        }
+        #line-3 {
+            animation: line3Anim 0.5s ease-in-out forwards;
+        }
+    }
+    span.open {
+        #line-1 {
+            animation: line1Anim-reverse 0.5s ease-in-out forwards;
+        }
+        #line-2 {
+            animation: line2Anim-reverse 0.5s ease-in forwards;
+        }
+        #line-3 {
+            animation: line3Anim-reverse 0.5s ease-in-out forwards;
+        }
+    }
+
+    .nav-links {
+        background-image: linear-gradient(to bottom right, $secondary-bg-color, $gray-blue);
+        position: absolute;
+        top: 0;
+        right: 0;
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        width: 100vw;
+        height: 100vh;
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in-out;
+        a {
+            color: white;
+            text-decoration: none;
+            font-weight: 900;
+            font-size: 40px;
+            &:hover {
+                animation: linkHover 0.3s ease-in-out forwards;
+            }
+            animation: linkHover-reverse 0.3s ease-in-out forwards;
+        }
+        .social-links {
+            ul {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-evenly;
+            }
+            
+            width: 100vw;
+            a {
+                color: white;
+                font-size: 50px;
+                animation: none !important;
+            }
+        }
+    }
+    
+    .nav-links.active {
+        transform: translateX(0%);
+    }
+}
+
+@media screen and (min-width: 992px) {
+    nav {
+        width: 100vw;
+        height: 7vh;
+        transition: top 0.3s;
+        padding: 0 100px;
+        .full-screen-social-links {
+            display: flex;
+            justify-content: space-between;
+            width: 25vw;
+            a {
+                color: $gray-blue;
+            }
+        }
+        span {
+            display: none;
+        }
+        .nav-links {
+            flex-direction: row;
+            transform: none;
+            align-items: flex-start;
+            justify-content: space-around;
+            top: 20px;
+            width: 50vw;
+            height: 0vh;
+            a {
+                animation: color 5s ease-in-out !important;
+                font-size: 20px;
+                color: $secondary-bg-color;
+                &:hover {
+                    color: $gray-blue;
+                }
+            }
+            .social-links {
+                display: none;
+            }
+        }
+        
+    }
+}
+
+@keyframes linkHover {
+    from {
+        border-bottom: 0;
+    } to {
+        border-bottom: 7px solid white;
+    }
+}
+@keyframes linkHover-reverse {
+    from {
+        border-bottom: 7px solid white;
+    } to {
+        border-bottom: 0;
+    }
+}
+@keyframes line1Anim {
+    from {
+        rotate: (0);
+    } to {
+        transform-origin: center;
+        transform: rotate(-45deg) translate(0, -7px);
+    }
+}
+@keyframes line2Anim {
+    from {
+        opacity: 1;
+    } to {
+        opacity: 0;
+    }
+}
+@keyframes line3Anim {
+    from {
+        rotate: (0);
+    } to {
+        transform-origin: center;
+        transform: rotate(45deg) translate(0, 8px);
+    }
+} 
+@keyframes line1Anim-reverse {
+    from {
+        transform-origin: center;
+        transform: rotate(-45deg) translate(0, -7px);
+    } to {
+        rotate: (0);
+    }
+}
+@keyframes line2Anim-reverse {
+    from {
+        opacity: 0;
+    } to {
+        opacity: 1;
+    }
+}
+@keyframes line3Anim-reverse {
+     from {
+        transform-origin: center;
+        transform: rotate(45deg) translate(0, 8px);
+    } to {
+        rotate: (0);
+    }
+} 

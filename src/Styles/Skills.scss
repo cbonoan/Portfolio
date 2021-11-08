@@ -1,0 +1,35 @@
+@import './variables';
+
+#skills-container {
+    min-height: 100vh;
+    background-color: $primary-bg-color;
+    padding: 30px;
+    #skills-list {
+        .skill-title {
+            font-size: 25px;
+            font-weight: 900;
+            margin-bottom: 15px;
+        }
+    }
+}
+#skills-title {
+    margin-bottom: 50px;
+    p {
+        color: $secondary-bg-color;
+        font-size: 12vw;
+        font-weight: 900;
+    }
+}
+
+@media screen and(min-width: 992px) {
+    #skills-title {
+        margin-top: 50px;
+        p {
+            padding: 0 100px;
+            font-size: 85px !important;
+        }
+    }
+    .skill-title {
+        text-align: center;
+    }
+}

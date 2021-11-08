@@ -1,0 +1,37 @@
+@import './variables';
+
+#home-page {
+    height: 100vh;
+    background-color: $primary-bg-color;
+    #home-bg-1 {
+        height: 100vh;
+        background-color: $secondary-bg-color;
+        transition: width 1s ease-in-out;
+    }
+    #greeting {
+        width: 100%;
+        padding: 15px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-weight: 900;
+        font-size: 10vw;
+        text-align: center;
+        letter-spacing: 2px;
+        line-height: 1.2;
+        color: #363636;
+        .cursor {
+            font-weight: 400;
+        }
+    }
+}
+
+@media screen and (min-width: 992px) {
+    #home-page {
+        #greeting {
+        font-size: 7vw;
+        }
+    }
+    
+}

@@ -1,0 +1,103 @@
+.card {
+  width: 18rem;
+  height: 500px;
+  -webkit-transition: -webkit-box-shadow 0.3s ease-in-out;
+  transition: -webkit-box-shadow 0.3s ease-in-out;
+  transition: box-shadow 0.3s ease-in-out;
+  transition: box-shadow 0.3s ease-in-out, -webkit-box-shadow 0.3s ease-in-out;
+  overflow-y: scroll;
+}
+
+.card .card-body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  line-height: 25px;
+  height: 225px;
+}
+
+.card .card-body .accordion .accordion-header button {
+  font-size: 17px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  border-radius: 15px;
+  border: 2px solid #323952;
+}
+
+.card .card-body .accordion .accordion-header button:hover {
+  background-color: #414A6B;
+  color: white;
+}
+
+.card .card-body .accordion .accordion-body {
+  letter-spacing: 1px;
+  border-radius: 5px 5px 12px 12px;
+  background-color: white;
+}
+
+.card .card-body .card-title {
+  font-weight: 800;
+  font-size: 22px;
+}
+
+.card .card-body #proj-tags {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.card .card-body #proj-tags .proj-tag {
+  min-width: 50px;
+  text-align: center;
+  font-size: 12px;
+  background-color: #E6E6E6;
+  padding: 0 5px;
+  border-radius: 20px;
+}
+
+.card .card-body #card-links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.card .card-body #card-links .proj-card-btn {
+  background-color: #414A6B;
+  color: white;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.card .card-body #card-links .proj-card-btn:hover {
+  opacity: 0.5;
+}
+
+.card:hover {
+  -webkit-box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+          box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+@media screen and (min-width: 810px) {
+  .card {
+    width: 25rem;
+    height: 600px;
+    overflow-y: hidden;
+  }
+  .card #proj-tags .proj-tag {
+    width: 75px;
+  }
+}
+/*# sourceMappingURL=ProjCard.css.map */

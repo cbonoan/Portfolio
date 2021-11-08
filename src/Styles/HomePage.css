@@ -1,0 +1,38 @@
+#home-page {
+  height: 100vh;
+  background-color: #F8F8F8;
+}
+
+#home-page #home-bg-1 {
+  height: 100vh;
+  background-color: #FF5851;
+  -webkit-transition: width 1s ease-in-out;
+  transition: width 1s ease-in-out;
+}
+
+#home-page #greeting {
+  width: 100%;
+  padding: 15px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  font-weight: 900;
+  font-size: 10vw;
+  text-align: center;
+  letter-spacing: 2px;
+  line-height: 1.2;
+  color: #363636;
+}
+
+#home-page #greeting .cursor {
+  font-weight: 400;
+}
+
+@media screen and (min-width: 992px) {
+  #home-page #greeting {
+    font-size: 7vw;
+  }
+}
+/*# sourceMappingURL=HomePage.css.map */

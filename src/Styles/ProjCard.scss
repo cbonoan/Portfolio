@@ -1,0 +1,81 @@
+@import './variables';
+
+.card {
+    width: 18rem;
+    height: 500px;
+    transition: box-shadow 0.3s ease-in-out;
+    overflow-y: scroll;
+    .card-body {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        line-height: 25px;
+        height: 225px;
+        .accordion {
+            .accordion-header {
+                button {
+                    font-size: 17px;
+                    font-weight: 700;
+                    letter-spacing: 1px;
+                    border-radius: 15px;
+                    border: 2px solid #323952;
+                    &:hover {
+                        background-color: $gray-blue;
+                        color: white;
+                    }
+                }
+            }
+            .accordion-body {
+                letter-spacing: 1px;
+                border-radius: 5px 5px 12px 12px;
+                background-color: white;
+            }
+        }
+        .card-title {
+            font-weight: 800;
+            font-size: 22px;
+        }
+        #proj-tags {
+            display: flex;
+            justify-content: space-between;
+            .proj-tag {
+                min-width: 50px;
+                text-align: center;
+                font-size: 12px;
+                background-color: #E6E6E6;
+                padding: 0 5px;
+                border-radius: 20px;
+            }
+        }
+        #card-links {
+            display: flex;
+            justify-content: space-between;
+            .proj-card-btn {
+                background-color: $gray-blue;
+                color: white;
+                font-weight: 700;
+                letter-spacing: 1px;
+                &:hover {
+                    opacity: 0.5;
+                }
+            }
+        }
+        
+    }
+    &:hover {
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    }
+}
+
+@media screen and (min-width: 810px) {
+    .card {
+        width: 25rem;
+        height: 600px;
+        overflow-y: hidden;
+        #proj-tags {
+            .proj-tag {
+                width: 75px;
+            }
+        }
+    }
+}

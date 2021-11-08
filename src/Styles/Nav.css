@@ -1,0 +1,356 @@
+nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: fixed;
+  top: 0;
+  right: 0;
+  min-height: 2vh;
+  width: 100vw;
+  padding: 10px 0 10px 10px;
+  z-index: 2;
+}
+
+nav .full-screen-social-links {
+  display: none;
+}
+
+nav span {
+  display: block;
+  height: 47px;
+  position: relative;
+  margin-right: 10px;
+  z-index: 100;
+  cursor: pointer;
+}
+
+nav span.close #line-1 {
+  -webkit-animation: line1Anim 0.5s ease-in-out forwards;
+          animation: line1Anim 0.5s ease-in-out forwards;
+}
+
+nav span.close #line-2 {
+  -webkit-animation: line2Anim 0.5s ease-in-out forwards;
+          animation: line2Anim 0.5s ease-in-out forwards;
+}
+
+nav span.close #line-3 {
+  -webkit-animation: line3Anim 0.5s ease-in-out forwards;
+          animation: line3Anim 0.5s ease-in-out forwards;
+}
+
+nav span.open #line-1 {
+  -webkit-animation: line1Anim-reverse 0.5s ease-in-out forwards;
+          animation: line1Anim-reverse 0.5s ease-in-out forwards;
+}
+
+nav span.open #line-2 {
+  -webkit-animation: line2Anim-reverse 0.5s ease-in forwards;
+          animation: line2Anim-reverse 0.5s ease-in forwards;
+}
+
+nav span.open #line-3 {
+  -webkit-animation: line3Anim-reverse 0.5s ease-in-out forwards;
+          animation: line3Anim-reverse 0.5s ease-in-out forwards;
+}
+
+nav .nav-links {
+  background-image: -webkit-gradient(linear, left top, right bottom, from(#FF5851), to(#414A6B));
+  background-image: linear-gradient(to bottom right, #FF5851, #414A6B);
+  position: absolute;
+  top: 0;
+  right: 0;
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100vw;
+  height: 100vh;
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+  -webkit-transition: -webkit-transform 0.5s ease-in-out;
+  transition: -webkit-transform 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out, -webkit-transform 0.5s ease-in-out;
+}
+
+nav .nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: 900;
+  font-size: 40px;
+  -webkit-animation: linkHover-reverse 0.3s ease-in-out forwards;
+          animation: linkHover-reverse 0.3s ease-in-out forwards;
+}
+
+nav .nav-links a:hover {
+  -webkit-animation: linkHover 0.3s ease-in-out forwards;
+          animation: linkHover 0.3s ease-in-out forwards;
+}
+
+nav .nav-links .social-links {
+  width: 100vw;
+}
+
+nav .nav-links .social-links ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+nav .nav-links .social-links a {
+  color: white;
+  font-size: 50px;
+  -webkit-animation: none !important;
+          animation: none !important;
+}
+
+nav .nav-links.active {
+  -webkit-transform: translateX(0%);
+          transform: translateX(0%);
+}
+
+@media screen and (min-width: 992px) {
+  nav {
+    width: 100vw;
+    height: 7vh;
+    -webkit-transition: top 0.3s;
+    transition: top 0.3s;
+    padding: 0 100px;
+  }
+  nav .full-screen-social-links {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: 25vw;
+  }
+  nav .full-screen-social-links a {
+    color: #414A6B;
+  }
+  nav span {
+    display: none;
+  }
+  nav .nav-links {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-transform: none;
+            transform: none;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    top: 20px;
+    width: 50vw;
+    height: 0vh;
+  }
+  nav .nav-links a {
+    -webkit-animation: color 5s ease-in-out !important;
+            animation: color 5s ease-in-out !important;
+    font-size: 20px;
+    color: #FF5851;
+  }
+  nav .nav-links a:hover {
+    color: #414A6B;
+  }
+  nav .nav-links .social-links {
+    display: none;
+  }
+}
+
+@-webkit-keyframes linkHover {
+  from {
+    border-bottom: 0;
+  }
+  to {
+    border-bottom: 7px solid white;
+  }
+}
+
+@keyframes linkHover {
+  from {
+    border-bottom: 0;
+  }
+  to {
+    border-bottom: 7px solid white;
+  }
+}
+
+@-webkit-keyframes linkHover-reverse {
+  from {
+    border-bottom: 7px solid white;
+  }
+  to {
+    border-bottom: 0;
+  }
+}
+
+@keyframes linkHover-reverse {
+  from {
+    border-bottom: 7px solid white;
+  }
+  to {
+    border-bottom: 0;
+  }
+}
+
+@-webkit-keyframes line1Anim {
+  from {
+    rotate: 0;
+  }
+  to {
+    -webkit-transform-origin: center;
+            transform-origin: center;
+    -webkit-transform: rotate(-45deg) translate(0, -7px);
+            transform: rotate(-45deg) translate(0, -7px);
+  }
+}
+
+@keyframes line1Anim {
+  from {
+    rotate: 0;
+  }
+  to {
+    -webkit-transform-origin: center;
+            transform-origin: center;
+    -webkit-transform: rotate(-45deg) translate(0, -7px);
+            transform: rotate(-45deg) translate(0, -7px);
+  }
+}
+
+@-webkit-keyframes line2Anim {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes line2Anim {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes line3Anim {
+  from {
+    rotate: 0;
+  }
+  to {
+    -webkit-transform-origin: center;
+            transform-origin: center;
+    -webkit-transform: rotate(45deg) translate(0, 8px);
+            transform: rotate(45deg) translate(0, 8px);
+  }
+}
+
+@keyframes line3Anim {
+  from {
+    rotate: 0;
+  }
+  to {
+    -webkit-transform-origin: center;
+            transform-origin: center;
+    -webkit-transform: rotate(45deg) translate(0, 8px);
+            transform: rotate(45deg) translate(0, 8px);
+  }
+}
+
+@-webkit-keyframes line1Anim-reverse {
+  from {
+    -webkit-transform-origin: center;
+            transform-origin: center;
+    -webkit-transform: rotate(-45deg) translate(0, -7px);
+            transform: rotate(-45deg) translate(0, -7px);
+  }
+  to {
+    rotate: 0;
+  }
+}
+
+@keyframes line1Anim-reverse {
+  from {
+    -webkit-transform-origin: center;
+            transform-origin: center;
+    -webkit-transform: rotate(-45deg) translate(0, -7px);
+            transform: rotate(-45deg) translate(0, -7px);
+  }
+  to {
+    rotate: 0;
+  }
+}
+
+@-webkit-keyframes line2Anim-reverse {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes line2Anim-reverse {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes line3Anim-reverse {
+  from {
+    -webkit-transform-origin: center;
+            transform-origin: center;
+    -webkit-transform: rotate(45deg) translate(0, 8px);
+            transform: rotate(45deg) translate(0, 8px);
+  }
+  to {
+    rotate: 0;
+  }
+}
+
+@keyframes line3Anim-reverse {
+  from {
+    -webkit-transform-origin: center;
+            transform-origin: center;
+    -webkit-transform: rotate(45deg) translate(0, 8px);
+            transform: rotate(45deg) translate(0, 8px);
+  }
+  to {
+    rotate: 0;
+  }
+}
+/*# sourceMappingURL=Nav.css.map */

@@ -1,0 +1,10 @@
+<svg width="45" height="45" viewBox="0 0 45 45" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="nav">
+<circle id="nav-circle" cx="22.5" cy="22.5" r="22.5" fill="white"/>
+<g id="nav-toggle">
+<path id="Line 3" d="M11 29L33 29" stroke="black" stroke-width="2" stroke-linecap="round"/>
+<line id="Line 2" x1="15" y1="22" x2="32" y2="22" stroke="black" stroke-width="2" stroke-linecap="round"/>
+<path id="Line 1" d="M11 15L33 15" stroke="black" stroke-width="2" stroke-linecap="round"/>
+</g>
+</g>
+</svg>
