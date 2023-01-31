@@ -44,7 +44,7 @@ function HomePage() {
         <div id="home-page">
             <div id="home-bg-1" style={{width: bgWidth+"%"}}></div>
             <span id="greeting">
-                HI 👋
+                HELLO, WORLD 👋
                 <br/>I'M
                 <br/>
                 <ReactTypingEffect 
